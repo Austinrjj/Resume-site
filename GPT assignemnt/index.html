@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Resume Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Austin J</h1>
+      <p class="tagline">Cybersecurity Student | Security Analyst in Training | Network Defense Focused</p>
+      <div class="hero-buttons">
+        <button id="themeToggle">Toggle Theme</button>
+        <button id="downloadPdf">Download PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="resume">
+    <section class="about section">
+      <div class="about-text" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2>About Me</h2>
+        <p>
+          I am a cybersecurity student with hands-on experience in network security, system monitoring,
+          and vulnerability analysis. I enjoy identifying weaknesses in systems and applying defensive
+          strategies to improve security. My focus areas include intrusion detection, firewall configuration,
+          and real-world lab environments.
+        </p>
+      </div>
+    </section>
+
+    <section class="experience section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="job-entry" data-company="Security Lab Environment">
+          <h3>Cybersecurity Lab Work</h3>
+          <p><strong>Academic Lab Environment</strong> | 2024 - Present</p>
+          <p>
+            Configured firewalls, analyzed logs, and worked with intrusion detection systems
+            in hands-on lab environments focused on real-world security scenarios.
+          </p>
+        </div>
+
+        <div class="job-entry" data-company="Network Defense Projects">
+          <h3>Network Security Student</h3>
+          <p><strong>University Coursework</strong> | 2023 - Present</p>
+          <p>
+            Completed projects involving packet analysis, NAT configuration, and secure
+            system administration using industry-relevant tools.
+          </p>
+        </div>
+
+        <div class="job-entry" data-company="Security Practice">
+          <h3>Independent Security Learner</h3>
+          <p><strong>Personal Practice</strong> | 2022 - Present</p>
+          <p>
+            Practiced cybersecurity concepts through labs, tools, and research focusing
+            on defensive security and threat detection techniques.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span>Network Security</span>
+          <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+        </div>
+        <div class="skill-card">
+          <span>Linux Administration</span>
+          <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+        </div>
+        <div class="skill-card">
+          <span>Wireshark</span>
+          <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+        </div>
+        <div class="skill-card">
+          <span>Vulnerability Analysis</span>
+          <div class="progress-bar"><div class="progress" data-width="78%"></div></div>
+        </div>
+        <div class="skill-card">
+          <span>Firewall Configuration</span>
+          <div class="progress-bar"><div class="progress" data-width="82%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Firewall and NAT Configuration Lab</h3>
+          <p>
+            Built and tested firewall rules and NAT configurations in a virtual lab environment
+            to control network traffic and enforce security policies.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Intrusion Detection Analysis</h3>
+          <p>
+            Used IDS tools to monitor traffic, identify suspicious activity, and analyze alerts
+            to improve detection and response skills.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>System Monitoring and Hardening</h3>
+          <p>
+            Strengthened system security by reviewing configurations, monitoring logs, and
+            identifying vulnerabilities in a controlled environment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" />
+        <input type="email" id="email" placeholder="Your Email" />
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+        <p id="formMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #222;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e3c72, #2ecc71);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button {
+  padding: 12px 20px;
+  border: none;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-2px);
+  background: #eee;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.timeline {
+  display: grid;
+  gap: 20px;
+}
+
+.job-entry {
+  background: white;
+  padding: 20px;
+  border-left: 6px solid #1e3c72;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.job-entry:hover {
+  transform: translateY(-4px);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.progress-bar {
+  background: #ddd;
+  height: 14px;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #1e3c72, #2ecc71);
+  border-radius: 10px;
+  transition: width 1.5s ease;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact button {
+  padding: 12px;
+  border: none;
+  background: #1e3c72;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #2ecc71;
+}
+
+#formMessage {
+  text-align: center;
+  font-weight: bold;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, bottom 0.4s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  bottom: 50px;
+}
+
+.dark-mode {
+  background: #1f1f1f;
+  color: #f5f5f5;
+}
+
+.dark-mode .job-entry,
+.dark-mode .skill-card,
+.dark-mode .project-card,
+.dark-mode .contact input,
+.dark-mode .contact textarea {
+  background: #2c2c2c;
+  color: #f5f5f5;
+  border-color: #555;
+}
+
+.dark-mode .hero-buttons button {
+  background: #333;
+  color: white;
+}
+
+.dark-mode .hero-buttons button:hover {
+  background: #444;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
